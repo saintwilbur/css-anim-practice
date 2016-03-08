@@ -1,0 +1,76 @@
+.circler {
+    animation-name: tutsFade;
+    /* total duration start to finish */
+    animation-duration: 4s;
+    /* delay before animation begins*/
+    animation-delay: 1s;
+    /* how many times animation iterates*/
+    animation-iteration-count: infinite;
+    /* animation speed function*/
+    animation-timing-function: linear;
+    /* ability to change loop direction*/
+    /* specifies which styles will be applied to the element when animation is complete */
+    /* animation-fill-mode */
+
+
+}
+
+/* css can be written shorthand like this */
+.circlerSh {
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    animation: tutsFade 4s 1s infinite linear alternate,
+        tutsRotate 4s 1s infinite linear alternate;
+}
+
+.square-circle {
+    margin: 100px 100px 100px 100px;
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    animation: square-to-circle 2s 1s infinite cubic-bezier(0.995, 0.000, 0.575, 1.360) alternate;
+}
+
+@keyframes tutsFade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes tutsRotate {
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes square-to-circle {
+    0%{
+        border-radius: 0 0 0 0;
+        background-color: coral;
+        transform: rotate(0deg);
+    }
+    25%{
+        border-radius: 50% 0 0 0;
+        background-color: darksalmon;
+        transform: rotate(45deg);
+    }
+    50%{
+        border-radius: 50% 50% 0 0;
+        background-color: indianred;
+        transform: rotate(90deg);
+    }
+    75%{
+        border-radius: 50% 50% 50% 0;
+        background-color: lightcoral;
+        transform: rotate(135deg);
+    }
+    100%{
+        border-radius: 50% 50% 50% 50%;
+        background-color: darksalmon;
+        transform: rotate(180deg);
+    }
+}
