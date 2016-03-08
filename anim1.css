@@ -2,5 +2,7 @@
 	position: fixed;
 	width: 50px;
 	height: 50px;
-	background-color: coral;
+    background-color: darksalmon;
+    border: 2px coral;
+    border-radius: 50% 50% 50% 50%;
 }

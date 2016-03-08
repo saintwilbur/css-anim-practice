@@ -25,9 +25,10 @@
 }
 
 .square-circle {
-    margin: 100px 100px 100px 100px;
-    width: 200px;
-    height: 200px;
+    /*margin: 100px 100px 100px 100px;*/
+    position: fixed;
+    width: 100px;
+    height: 100px;
     background-color: coral;
     animation: square-to-circle 2s 1s infinite cubic-bezier(0.995, 0.000, 0.575, 1.360) alternate;
 }
@@ -73,4 +74,58 @@
         background-color: darksalmon;
         transform: rotate(180deg);
     }
+}
+
+.firefly {
+    position: fixed;
+    background-color: transparent;
+    border-radius: 50% 50% 50% 50%;
+    animation: expandFirefly 3s 0s 2 linear alternate,
+                colorRotate 3s 0s 2 linear alternate;
+}
+
+@keyframes expandFirefly {
+    0% {
+        height: 0;
+        width: 0;
+        border: 4px transparent;
+
+    }
+    1% {
+        border: 8px solid ;
+    }
+    100% {
+        width: 600px;
+        height: 600px;
+        border: 8px solid;
+        transform: translate(-300px, -300px);
+    }
+}
+
+@keyframes colorRotate {
+    from {
+        border-color: rgb(255, 0, 0);
+    }
+    16.6% {
+        border-color: rgb(255, 0, 255);
+    }
+    33.3% {
+        border-color: rgb(0, 0, 255);
+    }
+    50% {
+        border-color: rgb(0, 255, 255);
+    }
+    66.6% {
+        border-color: rgb(0, 255, 0);
+    }
+    83.3% {
+        border-color: rgb(255, 255, 0);
+    }
+    to {
+        border-color: rgb(255, 0, 0);
+    }
+}
+
+body {
+    background-color: darkgray;
 }
